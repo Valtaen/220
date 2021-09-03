@@ -3,7 +3,7 @@ Name: Matt Stewart
 hello.py
 
 Problem: Create a function that prints "Hello, world!" while testing to ensure I can
-properly upload and sync files to GitHub
+properly upload and sync files to GitHub.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
