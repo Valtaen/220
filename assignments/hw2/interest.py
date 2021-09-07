@@ -2,7 +2,8 @@
 Name: Matt Stewart
 interest.py
 
-Problem: Calculate interest accrued over a month on an outstanding balance when a payment has been made
+Problem: Calculate interest accrued over a month on an outstanding balance
+when a payment may have been made at some point that month.
 
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
