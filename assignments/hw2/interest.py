@@ -19,7 +19,7 @@ def main():
     average_day_bal = ((previous_balance * days) - (payment * (days - payment_day)))/days
     monthly_rate = (rate/12 * .01)
     monthly_interest = round(average_day_bal * monthly_rate, 2)
-    print("The monthly interest incurred is", monthly_interest)
+    print(monthly_interest)
 
 
 main()
