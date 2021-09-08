@@ -22,4 +22,5 @@ def main():
     print(monthly_interest)
 
 
-main()
+if __name__ == '__main__':
+    main()
