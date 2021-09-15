@@ -53,7 +53,7 @@ def sequence():
 
 
 def pi():
-    terms = eval(input("Enter the number of terms you wish to output: "))
+    terms = eval(input("Enter the number of terms in the series: "))
     acc = 2
     for i in range(0, terms+1):
         numer = 2 + ((i//2) * 2)
@@ -61,4 +61,4 @@ def pi():
         acc = acc * (numer / denom)
     print(acc)
 
-#pi()
+pi()
