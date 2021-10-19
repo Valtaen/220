@@ -10,6 +10,7 @@ I certify that this assignment is entirely my own work.
 
 from graphics import *
 
+
 def code(message, key):
     message = message.replace(" ", "")
     message = message.upper()
@@ -22,7 +23,8 @@ def code(message, key):
         c = (m + k) % 26
         c = str(chr(ord('A') + c))
         acc = acc + c
-    return("".join(acc))
+    return"".join(acc)
+
 
 def main():
     win = GraphWin("Vigenere (But Really Bellaso) Cipher", 800, 400)
@@ -65,8 +67,10 @@ def main():
 # design GUI
 # set letters to numbers 0-25 (use a list -- how?)
 # use a modelo and add it to A? x = (ord(1) +/- ord(2)) % 26 . x = x + ord('A')
-#yay discrete structures helping out
-#need a way to remove spaces: message.replace(" ","")
+# yay discrete structures helping out
+# need a way to remove spaces: message.replace(" ","")
+
 
 if __name__ == '__main__':
     main()
+
