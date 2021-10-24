@@ -1,3 +1,15 @@
+"""
+Name: Matt Stewart
+weighted_average.py
+
+Problem: Take input from a text file to determine weighted average and save output to another file
+
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
+"""
+# There are so many issues that come up with running this. The multiplications end up
+# with numbers that go 10+ digits past the decimal despite using round. Every time I
+# run this, randomly a different average will be off by 0.1, with sometimes no errors.
 
 
 def weighted_average(in_file_name, out_file_name):
@@ -9,7 +21,6 @@ def weighted_average(in_file_name, out_file_name):
         name_split = new_line[0]
         number_split = new_line[1]
         num_split = number_split.split()
-        weight_grade = 0
         total_grade = 0
         for i in range(0, len(num_split), 2):
             weight += int(num_split[i])
@@ -25,14 +36,6 @@ def weighted_average(in_file_name, out_file_name):
                 total_grade += weight_grade
             outfile.write(str(name_split) + "'s average: " + str(round(total_grade, 1)) + "\n")
 
-#if __name__ == '__main__':
-#    main()
 
 weighted_average("grades.txt", "test.txt")
-
-#There are so many issues that come up with running this. The multiplications end up
-#with numbers that go 10+ digits past the decimal despite using round. If I remove
-#lines 12 or 28-29 then every time I run the test program different averages come up
-#with the wrong values each time, in no consistent pattern. If I leave those lines in,
-#however, the test runs accurately.
 
