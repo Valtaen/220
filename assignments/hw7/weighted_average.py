@@ -7,9 +7,8 @@ Problem: Take input from a text file to determine weighted average and save outp
 Certification of Authenticity:
 I certify that this assignment is entirely my own work.
 """
-# There are so many issues that come up with running this. The multiplications end up
-# with numbers that go 10+ digits past the decimal despite using round. Every time I
-# run this, randomly a different average will be off by 0.1, with sometimes no errors.
+# Every time I run this, randomly a different average will be off by 0.1,
+# either too low or too high, with sometimes no errors.
 
 
 def weighted_average(in_file_name, out_file_name):
@@ -29,13 +28,12 @@ def weighted_average(in_file_name, out_file_name):
         elif weight > 100:
             outfile.write(str(name_split) + "'s average: Error: The weights are more than 100." + "\n")
         else:
-            for i in range(0, len(num_split), 2):
-                weight_temp = int(num_split[i]) * 0.01
-                num_temp = int(num_split[i+1])
+            for j in range(0, len(num_split), 2):
+                weight_temp = int(num_split[j]) * 0.01
+                num_temp = int(num_split[j+1])
                 weight_grade = weight_temp * num_temp
                 total_grade += weight_grade
             outfile.write(str(name_split) + "'s average: " + str(round(total_grade, 1)) + "\n")
 
-
-weighted_average("grades.txt", "test.txt")
+weighted_average("grades.txt", "weighted_grades.txt")
 
