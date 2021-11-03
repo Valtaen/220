@@ -71,8 +71,8 @@ def over(board):
 
 def play():
     board = build()
+    display(board)
     while True:
-        display(board)
         play1 = eval(input("Player 1, where do you want to play an X? "))
         if legal(board, play1):
             fill(board, play1 - 1, "X")
