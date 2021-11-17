@@ -1,0 +1,4 @@
+Ned Stark 10.45 20
+Jon Stark 21.8 30
+Frodo Baggins 17.77 5
+Sam Gamgee 24.85 40

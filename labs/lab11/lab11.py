@@ -16,7 +16,6 @@ def get_words(filename):
 def pick_word(wordbank):
     ran_num = randint(0, len(wordbank)-1)
     secret_word = wordbank[ran_num]
-    print(secret_word)
     return secret_word
 
 def progress(guessed_word, turn_count, guessed_letters):
@@ -75,7 +74,7 @@ def playGame():
             turn_count += 1
         progress(guessed_word, turn_count, guessed_letters)
     if turn_count >= 7:
-        print("You have run out of turns.")
+        print("You have run out of turns. The word was " + secret_word)
     else:
         print("You've won!")
 

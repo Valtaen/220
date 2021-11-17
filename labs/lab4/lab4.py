@@ -118,7 +118,6 @@ def circle():
     circ.draw(win)
 
 
-
     inst_pt = Point(width / 2, 370)
     instructions = Text(inst_pt, "The radius is: " + str(r2))
     instructions.draw(win)

@@ -9,15 +9,15 @@ def cash_conversion():
     num = eval(input("Enter an integer: "))
     print("$" + '{:.2f}'.format(num))
 
-def encode():
-    s = input('Enter your message: ')
+def encode(message, key):
+    message = input('Enter your message: ')
     key = eval(input('Enter your key: '))
     acc = " "
-    for r in s:
+    for r in message:
         x = ord(r)
         x = x + key
         acc = acc + chr(x)
-    print(acc)
+    return(acc)
 
 def sphere_area(radius):
     area = 4 * math.pi * (radius ** 2)
@@ -41,19 +41,19 @@ def sum_n_cubes(n):
     print(acc)
     return(acc)
 
-def encode_better():
-    s = input("Enter your message: ")
-    k = input("Enter your key: ")
-    acc= " "
-    for i in range(len(s)):
-        c = s[i]
-        c = ord(c)
-        key = k[i%len(k)]
-        key = ord(key)-97
-        c = c + key
-        c = chr(c)
+def encode_better(message, key):
+    message = message.replace(" ", "")
+    message = message.upper()
+    key = key.replace(" ", "")
+    key = key.upper()
+    acc = ""
+    for i in range(len(message)):
+        m = ord(message[i])
+        k = ord(key[i % len(key)])
+        c = (m + k) % 26
+        c = str(chr(ord('A') + c))
         acc = acc + c
-    print(acc)
+    return"".join(acc)
 
 def main():
     cash_conversion()
